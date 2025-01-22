@@ -1,0 +1,215 @@
+@import url('reset.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+.section-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+.container-login {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+
+}
+
+.titulo {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.container-imagens-login {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.imagens-login {
+    padding: 10px;
+    width: 25px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.text-login {
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input {
+    height: 40px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 2px 2px 4px gray;
+
+}
+
+.button-login {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 5px 0;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 2px 2px 4px gray;
+
+}
+
+
+/*Estilização signUp*/
+.sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    background-color: black;
+    height: 100%;
+    border-radius: 35% 20px 20px 35%;
+    color: white;
+}
+
+.title-sign {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.text-sign {
+    font-size: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+.btn-color {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+    background-color: rgb(240, 248, 255, 0);
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+
+}
+
+.btn-color:hover {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    padding: 10px;
+    color: gray;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+
+@media screen and (max-width:476px) {
+
+    .container-login {
+        width: 90%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    /*Estilização signUp*/
+    .sign {
+        padding: 25px;
+        border-radius: 20px;
+        color: white;
+
+    }
+
+    .title-sign {
+        font-size: 1.4rem;
+        font-weight: 600;
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+
+    .text-sign {
+        font-size: 0.8rem;
+        margin: 1rem 0;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+/*ESTILIZAÇÃO ANIMAÇÃO*/
+
+.btn-color::before,
+.btn-color::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background:linear-gradient(45deg, gray,black,gray);
+    background-size: 300%;
+    border-radius: 5px;
+    animation: AnimaBorder 8s linear infinite ;
+
+}
+
+@keyframes AnimaBorder {
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 300%;
+    }
+}
